@@ -9,6 +9,11 @@ public class Main {
 		cx.buscarMAC("2C:6E:85:CB:EB:C5");
 		cx.buscarConexionEquipo(1);
 		
+		cx.setUsuario("nombre_", "Papellido_", "Sapellido_", "username_", "email_", "pass_");
+		
+		cx.close();
+		
+		
 	}
 
 	/* (non-Java-doc)
