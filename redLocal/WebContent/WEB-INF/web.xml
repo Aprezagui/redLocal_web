@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    version="2.5">
+<welcome-file-list>
+<welcome-file>/login.jsp</welcome-file>
+</welcome-file-list>
+
+
+</web-app>
+
+
+<!--  
+<filter>
+    <filter-name>filtroSeguridad</filter-name>
+    <filter-class>FiltroSeguridad</filter-class>
+    <init-param>
+        <param-name>paginaError</param-name>
+        <param-value>/errores/error.jsp</param-value>
+    </init-param>
+       <init-param>
+        <param-name>paginaFinSesion</param-name>
+        <param-value>/errores/nosesion.jsp</param-value>
+    </init-param>
+</filter>
+
+<filter-mapping>
+    <filter-name>filtroSeguridad</filter-name>
+    <url-pattern>redLocal/Registro.html</url-pattern>      
+</filter-mapping>
+-->

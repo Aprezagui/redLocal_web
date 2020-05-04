@@ -5,11 +5,12 @@
         <title>Registro</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         
+        
         <script type="text/javascript" src="js/registro.js"></script>
     </head>
  <body>
 	  <div class="registro" >
-        <form name ="formulario" method="post"  action ="Registro.jsp">
+        <form name="formulario" action ="Controlador" method="post">
             
             <div class="titulo">
                ¡Regístrate!
@@ -20,23 +21,25 @@
                 <input type="text" name="nombre"/>
                 <label for="usuario">Primer apellido:</label>
                 <input type="text" name="apellido1" />
-                <label for="usuario">Segudo apellido:</label>
+                <label for="usuario">Segundo apellido:</label>
                 <input type="text" name="apellido2" />
             </div>
             
             <div class="campo">
                 <label for="usuario">Nombre usuario:</label>
-                <input type="text" name="username" />
+                <input type="text" name="username" onchange="validar_username()" />
+                <img hidden  id="autov_username_img" src="img/field_check.gif" alt="Nombre de usuario ocupado" title="Nombre de usuario ocupado"></img>
             </div>
             
             <div class="campo">
-                <label for="usuario">Email</label>
+                <label for="usuario">Email:</label>
                 <input type="text" name="email" />
             </div>
             
             <div class="campo">
                 <label for="pass1">Contraseña:</label>
-                <input type="password" name="pass1" id="pass1" onkeyup="validar_clave()"/>
+                <input type="password" name="pass1" id="pass1" onkeyup="validar_clave()"
+                title="La contraseña debe tener un mínimo de 6 caracteres alfanuméricos: &#10;Con almenos un número, una mayúscula, una minúscula y un carácter especial."/>
                 <img hidden  id="autov_pass1_img" src="img/field_invalid.gif" alt="Contraseña demasiado debil" title="Contraseña demasiado debil"></img>
                 <span class="mensaje" id="mensaje2"> </span>
             </div>
@@ -45,10 +48,12 @@
                 <label for="pass2">Confirmar contraseña:</label>
                 <input  type="password" name="pass2" id="pass2" onkeyup="validar_segunda_clave()"/>
                 <img hidden id="autov_pass2_img" src="img/field_invalid.gif" alt="La contraseña no coinciden" title="La contraseña no coinciden"></img>              
+            	
             </div>
             
             <div class="boton">
-                <input type="submit" value="Enviar"/>
+            	<input hidden type="text" name="acction2" value="Enviar" />
+            	<input  type="submit" id="submit_registro" name="acction" value="Enviar" />
             </div>
             
         </form>
